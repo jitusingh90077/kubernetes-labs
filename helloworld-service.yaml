@@ -10,4 +10,3 @@ spec:
   slector:
     app: helloworld
   type: NodePort
-    
