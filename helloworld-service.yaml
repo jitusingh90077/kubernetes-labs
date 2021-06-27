@@ -7,6 +7,6 @@ spec:
   - port: 31001
     targetPort: nodejs-port
     protocol: TCP
-  slector:
+  selector:
     app: helloworld
   type: NodePort
