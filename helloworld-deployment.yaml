@@ -4,8 +4,8 @@ metadata:
   name: helloworld-deployment
 spec:
   replicas: 3
-  Selector:
-    matchLabel:
+  selector:
+    matchLabels:
       app: helloworld
   template:
     metadata:
@@ -13,8 +13,8 @@ spec:
         app: helloworld
     spec:
       containers:
-      - name: k8s-demo
-        image: arjunachari12/k8s-demo
-        ports:
-          - name: nodejs-port
-            containerPort: 3000
+        - name: k8s-demo
+          image: arjunachari12/k8s-demo
+          ports:
+            - name: nodejs-port
+              containerPort: 3000
