@@ -8,5 +8,5 @@ spec:
     targetPort: nodejs-port
     protocol: TCP
   selector:
-    app: redisload
+    app: redisload-services
   type: LoadBalancer
