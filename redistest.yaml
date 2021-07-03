@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redistest-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: redistest
+  template:
+    metadata:
+      labels:
+        app: redistest
+    spec:
+      containers:
+      - name: redis-demo
+        image: redis
+        ports:
+        - name: nodejs-port
+          containerPort: 3002
+        livenessProbe:
+          httpGet:
+            path: /
+            port: nodejs-port
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /
+            port: nodejs-port
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
