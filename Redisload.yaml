@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: redisload
+spec:
+  ports:
+  - port: 31002
+    targetPort: nodejs-port
+    protocol: TCP
+  selector:
+    app: redisload
+  type: LoadBalancer
