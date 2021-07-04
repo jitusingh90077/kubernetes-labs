@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  container:
+  containers:
   - name: nginx
     image: nginx1909
     ports:
