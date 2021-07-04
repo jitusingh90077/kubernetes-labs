@@ -8,6 +8,6 @@ spec:
   container:
   - name: nginx
     image: nginx1909
-  ports:
+    ports:
     name: nodejs-port
     containerPort: 0
