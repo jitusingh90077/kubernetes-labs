@@ -9,5 +9,5 @@ spec:
   - name: nginx
     image: nginx1909
     ports:
-    name: nodejs-port
-    containerPort: 81
+    - name: nodejs-port
+      containerPort: 8080
